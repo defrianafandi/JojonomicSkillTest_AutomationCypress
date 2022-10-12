@@ -10,8 +10,8 @@ describe('Test search and find locations', () => {
     Cypress.on('uncaught:exception', (err, runnable) => {
       return false
     })
-    cy.get('#homeautosuggestpTPTHOb9F9A > .form__text').type(search_valid.toString(),{force: true, delay: 0})
-    cy.get('#homeautosuggestpTPTHOb9F9A > .form__text').type('{enter}')
+    cy.get('#homeautosuggestpTPTHOb9F9A > .form__text').type(search_valid.toString())
+    cy.get('#homeautosuggestpTPTHOb9F9A > .form__text').type('{enter}',{force: true, delay: 0})
     cy.contains('Apply for a number plate').should('be.visible')
     cy.get('.search__result').eq(2).scrollIntoView().should('be.visible')
     cy.contains('number').should('be.visible')  

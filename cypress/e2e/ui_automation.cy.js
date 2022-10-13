@@ -1,6 +1,6 @@
 let search_valid = 'Apply for a number plate'
 let loc_valid = 'Sydney 2000'
-let base_url = Cypress.env('base_url')
+let base_url = Cypress.env('url_ui')
 
 
 describe('Test search and find locations', () => {
